@@ -1,5 +1,6 @@
 package br.com.petz.cliente_pet;
 
+import br.com.petz.cliente_pet.cliente.domain.Cliente;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
