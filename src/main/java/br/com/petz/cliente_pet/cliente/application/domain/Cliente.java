@@ -1,5 +1,6 @@
 package br.com.petz.cliente_pet.cliente.application.domain;
 
+import br.com.petz.cliente_pet.cliente.application.api.ClienteRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -41,17 +42,16 @@ public class Cliente {
     private LocalDateTime dataHoraDoCadastro;
     private LocalDateTime dataHoraDaUltimaAlteracao;
 
-    public Cliente(@NotBlank String nomeCompleto, @NotBlank @Email String email, @NotBlank String celular,
-                   String telefone, Sexo sexo, @NotNull LocalDate dataNascimento, @CPF String cpf,
-                   @NotNull Boolean aceitaTermos) {
-        this.nomeCompleto = nomeCompleto;
-        this.email = email;
-        this.celular = celular;
-        this.telefone = telefone;
-        this.sexo = sexo;
-        this.dataNascimento = dataNascimento;
-        this.cpf = cpf;
-        this.aceitaTermos = aceitaTermos;
+    public Cliente(ClienteRequest clienteRequest){
+        this.nomeCompleto = clienteRequest.getNomeCompleto();
+        this.email = clienteRequest.getEmail();
+        this.celular = clienteRequest.getCelular();
+        this.telefone = clienteRequest.getTelefone();
+        this.sexo = clienteRequest.getSexo();
+        this.dataNascimento = clienteRequest.getDataNascimento();
+        this.cpf = clienteRequest.getCpf();
+        this.aceitaTermos = clienteRequest.getAceitaTermos();
         this.dataHoraDoCadastro = LocalDateTime.now();
     }
+
 }
