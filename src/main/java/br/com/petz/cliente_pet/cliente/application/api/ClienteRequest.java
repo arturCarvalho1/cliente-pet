@@ -1,6 +1,6 @@
 package br.com.petz.cliente_pet.cliente.application.api;
 
-import br.com.petz.cliente_pet.cliente.domain.Sexo;
+import br.com.petz.cliente_pet.cliente.application.domain.Sexo;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

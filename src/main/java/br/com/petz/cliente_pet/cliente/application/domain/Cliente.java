@@ -1,4 +1,4 @@
-package br.com.petz.cliente_pet.cliente.domain;
+package br.com.petz.cliente_pet.cliente.application.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -9,7 +9,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import org.hibernate.validator.constraints.br.CPF;
-import org.springframework.context.annotation.EnableMBeanExport;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
