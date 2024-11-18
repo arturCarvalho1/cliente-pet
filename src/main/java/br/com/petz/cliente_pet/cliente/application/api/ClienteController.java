@@ -5,11 +5,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @Log4j2
 @RequiredArgsConstructor
-public class ClienteController implements ClienteAPI {
-
+public class ClienteController implements ClienteAPI{
     private final ClienteService clienteService;
 
     @Override
@@ -18,5 +19,12 @@ public class ClienteController implements ClienteAPI {
         ClienteResponse clienteCriado = clienteService.criaCliente(clienteRequest);
         log.info("[finaliza] ClienteController - postCliente");
         return clienteCriado;
+    }
+
+    @Override
+    public List<ClienteListResponse> getTodosClientes() {
+        log.info("[inicia] ClienteController - getTodosClientes");
+        log.info("[finaliza] ClienteController - getTodosClientes");
+        return null;
     }
 }
