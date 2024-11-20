@@ -2,7 +2,7 @@ package br.com.petz.cliente_pet.cliente.infra;
 
 import br.com.petz.cliente_pet.cliente.application.domain.Cliente;
 import br.com.petz.cliente_pet.cliente.application.repository.ClienteRepository;
-import br.com.petz.cliente_pet.cliente.handler.APIException;
+import br.com.petz.cliente_pet.handler.APIException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -10,7 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Repository
