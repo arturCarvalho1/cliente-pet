@@ -1,6 +1,5 @@
 package br.com.petz.cliente_pet.pet.application.api;
 
-import br.com.petz.cliente_pet.pet.domain.Pet;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -25,10 +24,11 @@ public class PetController implements PetAPI{
     }
 
     @Override
-    public List<petClienteListResponse> getPetsDoClienteComId(UUID idCliente) {
+    public List<PetClienteListResponse> getPetsDoClienteComId(UUID idCliente) {
         log.info("[inicia] PetController - getPetsDoClienteComId");
         log.info("[idCliente] {}", idCliente);
+        List<PetClienteListResponse> petsDoCliente = petService.buscaPetsDoClienteComId(idCliente);
         log.info("[finaliza] PetController - getPetsDoClienteComId");
-        return null;
+        return petsDoCliente;
     }
 }

@@ -1,8 +1,5 @@
 package br.com.petz.cliente_pet.pet.application.api;
 
-import br.com.petz.cliente_pet.cliente.application.api.ClienteListResponse;
-import br.com.petz.cliente_pet.cliente.application.api.ClienteRequest;
-import br.com.petz.cliente_pet.cliente.application.api.ClienteResponse;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -20,5 +17,5 @@ public interface PetAPI {
 
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)
-    List<petClienteListResponse> getPetsDoClienteComId(@PathVariable UUID idCliente);
+    List<PetClienteListResponse> getPetsDoClienteComId(@PathVariable UUID idCliente);
 }
