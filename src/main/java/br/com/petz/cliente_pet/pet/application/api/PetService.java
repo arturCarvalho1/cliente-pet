@@ -8,4 +8,5 @@ import java.util.UUID;
 public interface PetService {
      PetResponse criaPet(UUID idCliente, @Valid PetRequest petRequest);
      List<PetClienteListResponse> buscaPetsDoClienteComId(UUID idCliente);
+     PetClienteDetalhadeResponse buscaPetDoClienteComId(UUID idCliente, UUID idPet);
 }
