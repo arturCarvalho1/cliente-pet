@@ -22,7 +22,7 @@ import java.util.UUID;
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(columnDefinition = "uuid", name = "idCliente", updatable = false, unique = true, nullable = false)
+            @Column(columnDefinition = "uuid", name = "idCliente", updatable = false, unique = true, nullable = false)
     private UUID idCliente;
     @NotBlank
     private String nomeCompleto;
@@ -53,7 +53,7 @@ public class Cliente {
         this.telefone = clienteRequest.getTelefone();
         this.sexo = clienteRequest.getSexo();
         this.dataNascimento = clienteRequest.getDataNascimento();
-        this.cpf = clienteRequest.getCpf();
+         this.cpf = clienteRequest.getCpf();
         this.aceitaTermos = clienteRequest.getAceitaTermos();
         this.dataHoraDoCadastro = LocalDateTime.now();
     }

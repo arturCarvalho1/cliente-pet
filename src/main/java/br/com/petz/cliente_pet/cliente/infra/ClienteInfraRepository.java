@@ -44,7 +44,8 @@ public Cliente salva(Cliente cliente){
     public Cliente buscaClienteAtravesId(UUID idCliente) {
         log.info("[inicia] ClienteInfraRepository - buscaClienteAtravesId");
         Cliente cliente = clienteSpringDataJPARepository.findById(idCliente)
-                .orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Cliente não encontrado!"));        log.info("[finaliza] ClienteInfraRepository - buscaClienteAtravesId");
+                .orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Cliente não encontrado!"));
+        log.info("[finaliza] ClienteInfraRepository - buscaClienteAtravesId");
         return cliente;
     }
 
